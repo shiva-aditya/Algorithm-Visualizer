@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1><u>Algorithm Visualizer</u></h1><br>
+    </header>
+
+    <body>
+        <div class="parent" id="par"></div>
+        <div class="group" id="message"></div>
+        <div class="display">
+            <div>
+                <input type="range" id="myrange" min="3" max="10" value="5">
+                <span id="dis">Slider Value is: 5</span>
+            </div>
+            <div>
+                <input type="range" id="speed" min="500" max="10000" value="1000">
+                <span id="sp">Animation Speed is: 1.0s</span>
+            </div>
+            <br>    
+        </div>
+        <div class="group">
+            <label for="algo">Select a Algorithm: </label>
+            <select id="algo">
+                <option value="None">Please choose an option</option>
+                <option value="Bubble_Sort">Bubble Sort</option>
+                <option value="Insertion_Sort">Insertion Sort</option>
+                <option value="Merge_Sort">Merge Sort</option>
+            </select>
+        </div><br>
+        <div class="group">
+            <button id ="gen_Btn" onclick="gene()">Generate</button>
+            <button id ="srt_Btn" onclick="sort_it()" disabled>Sort me</button>
+            <button id ="clr_Btn" onclick="clean()" disabled>Clear It</button>
+        </div>
+        <fieldset class="matter" id="matter">
+            <legend id="heading"></legend>
+            <fieldset class="con" id="one">
+            </fieldset>
+            <fieldset class="con" id="two">
+                <pre id="code"></pre>
+            </fieldset>
+        </fieldset>
+    </body>
+    <footer>
+        <div id="foot">-Made By Shiva_K-</div>
+    </footer>
+    <script>
+        function sort_it(){
+            let opt = document.getElementById("algo").value;
+            if (opt == "Bubble_Sort"){
+                bubble_sort();
+            }
+            else if (opt == "Insertion_Sort"){
+                insertion_sort();
+            }
+            else if (opt == "Merge_Sort"){
+
+            }
+        }
+    </script>
+    <script src="Bubble_Sort.js"></script>
+    <script src="Insertion_Sort.js"></script>
+</body>
+
+</html>
