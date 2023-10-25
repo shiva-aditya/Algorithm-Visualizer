@@ -52,42 +52,21 @@ function InsertionSort(arr):
         arr[j + 1] = key
         `;
         }
-        else if (op.value == "Merge_Sort"){
-            heady.innerHTML = "Merge Sort";
+        else if (op.value == "Selection_Sort"){
+            heady.innerHTML = "Selection Sort";
             heady.style.textDecoration = "underline";
-            document.getElementById("one").innerHTML = `Merge sort is a divide-and-conquer sorting algorithm known for its efficiency and stability. It divides the unsorted list into smaller sublists, sorts each sublist, and then merges them to produce a single sorted list. Merge sort is highly efficient and has a consistent time complexity of O(n log n), making it suitable for large datasets. It is a stable sort, meaning it preserves the order of equal elements. While merge sort is efficient, it does require additional memory for its temporary arrays during the merging process, which can be a drawback in memory-constrained environments.`;
+            document.getElementById("one").innerHTML = `Selection Sort is a simple comparison-based sorting algorithm that divides an array into two parts - sorted and unsorted. It repeatedly selects the smallest (or largest) element from the unsorted part and swaps it with the leftmost element of the unsorted part. This process continues until the entire array is sorted. Selection Sort has a time complexity of O(n^2), making it inefficient for large datasets. However, it's simple to implement and requires minimal memory, which can be advantageous for small datasets or as a building block in more complex algorithms.`;
             document.getElementById("code").innerHTML = 
-            `Sudo Code:
-function MergeSort(arr):
-    if length(arr) <= 1:
-        return arr
-    mid = length(arr) / 2
-    left = subarray(arr, 0, mid - 1)
-    right = subarray(arr, mid, length(arr) - 1)
-    // Recursively sort both sublists
-    left = MergeSort(left)
-    right = MergeSort(right)
-    // Merge the sorted sublists
-    result = Merge(left, right)
-
-    return result
-
-function Merge(left, right):
-    result = empty array
-    while left is not empty and right is not empty:
-        if left[0] <= right[0]:
-            append left[0] to result
-            remove left[0] from left
-        else:
-            append right[0] to result
-            remove right[0] from right
-
-    // Append any remaining elements (if any)
-    append remaining elements of left to result
-    append remaining elements of right to result
-
-    return result
-            `;
+`Sudo Code:
+function selectionSort(arr):
+n = length of arr
+for i from 0 to n-1:
+    minIndex = i
+    for j from i+1 to n:
+        if arr[j] < arr[minIndex]:
+            minIndex = j
+    swap arr[i] and arr[minIndex]
+    `;
         }
     }
 });
@@ -112,17 +91,17 @@ function gene() {
     srtBtn.disabled = false;
     clrBtn.disabled = false;
     message.innerHTML = "";
-    let colo = ["#475569", "#dc2626", "#ca8a04", "#0ea5e9", "#fbcfe8", "#fde047"], ind = 0;
+    let colo = ["#b91c1c", "#d97706", "#15803d", "#38bdf8", "#4c1d95", "#fb7185", "#a3e635", "#52525b"], ind = 0;
     pare.style.display = "block";
     const num = rangeInput.value;
     pare.innerHTML = "";
     for (var i = 0; i < num; i++) {
         const div = document.createElement("div");
         div.classList.add("box");
-        let x = Math.floor((Math.random() * 100) + 1);
+        let x = Math.floor(Math.random() * (100 - 2 + 1)) + 2;
         div.innerHTML = x;
         div.style.width = x + "vw";
-        x = Math.floor((Math.random() * 5) + 1);
+        x = Math.floor(Math.random() * 7);
         div.style.backgroundColor = colo[x];
         pare.appendChild(div);
     }
