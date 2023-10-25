@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
                 <span id="dis">Slider Value is: 5</span>
             </div>
             <div>
-                <input type="range" id="speed" min="500" max="10000" value="1000">
+                <input type="range" id="speed" min="500" max="5000" value="1000">
                 <span id="sp">Animation Speed is: 1.0s</span>
             </div>
             <br>    
@@ -31,7 +31,7 @@
                 <option value="None">Please choose an option</option>
                 <option value="Bubble_Sort">Bubble Sort</option>
                 <option value="Insertion_Sort">Insertion Sort</option>
-                <option value="Merge_Sort">Merge Sort</option>
+                <option value="Selection_Sort">Selection Sort</option>
             </select>
         </div><br>
         <div class="group">
@@ -62,13 +62,14 @@
             else if (opt == "Insertion_Sort"){
                 insertion_sort();
             }
-            else if (opt == "Merge_Sort"){
-
+            else if (opt == "Selection_Sort"){
+                selection_sort();
             }
         }
     </script>
     <script src="Bubble_Sort.js"></script>
     <script src="Insertion_Sort.js"></script>
+    <script src="Selection_Sort.js"></script>
 </body>
 
 </html>

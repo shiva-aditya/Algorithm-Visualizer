@@ -36,6 +36,18 @@ header {
     align-items: center;
 }
 
+.cude{
+    height: 5%;
+    margin: 0.5%;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: large;
+    font-weight: 800;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 9px;
+    transition: all 1s;
+}
 .box {
     height: 5%;
     margin: 0.5%;
@@ -47,7 +59,6 @@ header {
     border: 1px solid black;
     border-radius: 9px;
 }
-
 button {
     margin: 0.2%;
     height: 5vh;

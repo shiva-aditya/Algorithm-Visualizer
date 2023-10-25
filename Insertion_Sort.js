@@ -60,7 +60,7 @@ async function insertion_sort() {
     genBtn.disabled = false;
     clrBtn.disabled = false;
 }
-a// Anime Function
+// Anime Function
 async function insertion_sort_anime(ind, arr) {
     let one_ele = arr[ind];
     let two_ele = arr[ind + 1];
